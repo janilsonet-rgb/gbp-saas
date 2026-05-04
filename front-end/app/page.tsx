@@ -205,7 +205,7 @@ export default function Home() {
     setLoading(true)
     const percentual = calcularPercentual()
     try {
-      const res = await fetch('http://localhost:5001/analyze', {
+      const res = await fetch('https://gbp-saas-production.up.railway.app/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query, keyword, percentual }),
